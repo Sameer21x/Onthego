@@ -1,0 +1,66 @@
+/* Custom styles for the switch tab component */
+.tabs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+  
+  /* Override shadcn/ui tab styles for better visual hierarchy */
+  [data-state="active"][role="tab"] {
+    font-weight: 600;
+  }
+  
+  /* Specification grid styling */
+  .specification-grid {
+    display: grid;
+    gap: 0.5rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .specification-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    [role="tablist"] {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
+  /* Ensure proper spacing between sections */
+  .content-section:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+  
+  /* Improve text readability */
+  .feature-list li {
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Add subtle transitions */
+  .tab-content {
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  [role="tab"] {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    .feature-list li {
+      color: rgb(209 213 219);
+    }
+  
+    .specification-label {
+      color: rgb(156 163 175);
+    }
+  
+    .specification-value {
+      color: rgb(229 231 235);
+    }
+  }
+  
+  

@@ -1,0 +1,29 @@
+.about-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .about-main {
+    flex: 1;
+    padding: 40px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  
+  .about-main h1 {
+    text-align: center;
+    color: #0093F8;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-main {
+      padding: 20px 0;
+    }
+  }
+  
+  

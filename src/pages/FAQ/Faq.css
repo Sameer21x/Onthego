@@ -1,0 +1,23 @@
+.faq-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .faq-main {
+    flex: 1;
+    padding: 40px 0;
+    background-color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    .faq-main {
+      padding: 20px 0;
+    }
+    
+    .accordion-container {
+      padding: 20px 16px;
+    }
+  }
+  
+  

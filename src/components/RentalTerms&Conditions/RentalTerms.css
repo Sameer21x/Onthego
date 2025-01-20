@@ -1,0 +1,87 @@
+.rental-terms-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    font-family: system-ui, -apple-system, sans-serif;
+    color: #333;
+  }
+  
+  .rental-terms-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #000;
+  }
+  
+  .rental-terms-content {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: #fff;
+  }
+  
+  .terms-intro {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .terms-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .terms-section h2 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #000;
+  }
+  
+  .terms-section p {
+    margin-bottom: 0.75rem;
+    line-height: 1.5;
+  }
+  
+  .deposit-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0.75rem 0;
+  }
+  
+  .deposit-list li {
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+  
+  .terms-agreement {
+    margin-top: 1.5rem;
+    font-weight: 500;
+  }
+  
+  @media (max-width: 768px) {
+    .rental-terms-container {
+      margin: 1rem auto;
+    }
+  
+    .rental-terms-content {
+      padding: 1.5rem;
+    }
+  
+    .rental-terms-title {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .rental-terms-content {
+      padding: 1rem;
+    }
+  
+    .rental-terms-title {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  

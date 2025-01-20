@@ -1,0 +1,112 @@
+.carousel-container {
+    background-color: #00A3E0;
+    padding: 24px;
+    border-radius: 8px;
+    width: 100%;
+  }
+  
+  .title-section {
+    margin-bottom: 20px;
+  }
+  
+  .title-section h2 {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+  }
+  
+  .title-section h3 {
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0 0 0;
+  }
+  
+  .carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .carousel-track {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+    gap: 16px;
+    padding: 4px;
+  }
+  
+  .carousel-track::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+  
+  .carousel-card {
+    min-width: 180px;
+    height: 120px;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand-logo {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+  }
+  
+  .nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    z-index: 1;
+  }
+  
+  .nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .carousel-card {
+      min-width: calc(50% - 16px); /* 2 cards on mobile */
+    }
+  }
+  
+  @media (min-width: 769px) and (max-width: 1024px) {
+    .carousel-card {
+      min-width: calc(33.333% - 16px); /* 3 cards on tablet */
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    .carousel-card {
+      min-width: calc(20% - 16px); /* 5 cards on desktop */
+    }
+  }
+  
+  
