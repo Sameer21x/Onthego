@@ -1,15 +1,20 @@
 import React, { useRef } from "react";
 import "../ImageCarousel/Imagecarousel.css";
+import banner1 from "../../assets/images/banner1.jpeg"
+import banner2 from "../../assets/images/banner2.png"
+import banner3 from "../../assets/images/banner3.png"
+
 
 const images = [
-  { src: "image1.jpg", alt: "Image 1" },
-  { src: "image2.jpg", alt: "Image 2" },
-  { src: "image3.jpg", alt: "Image 3" },
+  { src: banner3, alt: "Image 1" }, // Directly use the imported images
+  { src: banner2, alt: "Image 2" },
+  { src: banner3, alt: "Image 3" },
   { src: "image3.jpg", alt: "Image 4" },
   { src: "image3.jpg", alt: "Image 5" },
   { src: "image3.jpg", alt: "Image 6" },
   { src: "image3.jpg", alt: "Image 7" },
 ];
+
 
 const ImageCarousel = () => {
   const carouselRef = useRef(null);

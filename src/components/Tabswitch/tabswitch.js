@@ -1,9 +1,12 @@
 "use client"
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import RentalTerms from "./rental-terms"
+import React, { useState } from "react"
+import RentalTerms from "../RentalTerms&Conditions/RentalTerms"
+import "./tabswitch.css"
 
 export default function SwitchTab() {
+  const [activeTab, setActiveTab] = useState("description")
+
   const productDescription = {
     features: [
       "Sturdy Frame: Powder-coated silver vein steel frame ensures long-lasting durability.",
@@ -30,47 +33,60 @@ export default function SwitchTab() {
   }
 
   return (
-    <Tabs defaultValue="description" className="w-full">
-      <TabsList className="grid w-full grid-cols-2 max-w-[400px]">
-        <TabsTrigger value="description">Description</TabsTrigger>
-        <TabsTrigger value="rental-terms">Rental Terms & Conditions</TabsTrigger>
-      </TabsList>
+    <div className="switch-tab">
+      <div className="tab-list">
+        <button
+          className={`tab-trigger ${activeTab === "description" ? "active" : ""}`}
+          onClick={() => setActiveTab("description")}
+        >
+          Description
+        </button>
+        <button
+          className={`tab-trigger ${activeTab === "rental-terms" ? "active" : ""}`}
+          onClick={() => setActiveTab("rental-terms")}
+        >
+          Rental Terms & Conditions
+        </button>
+      </div>
 
-      <TabsContent value="description" className="mt-6">
-        <div className="space-y-6">
-          <section>
-            <h3 className="font-semibold text-lg mb-3">Features:</h3>
-            <ul className="space-y-2">
-              {productDescription.features.map((feature, index) => (
-                <li key={index} className="text-gray-700">
-                  {feature}
-                </li>
-              ))}
-            </ul>
-          </section>
+      <div className="tab-content">
+        {activeTab === "description" && (
+          <div className="description-content">
+            <section>
+              <h3 className="content-title">Features:</h3>
+              <ul className="feature-list">
+                {productDescription.features.map((feature, index) => (
+                  <li key={index}>{feature}</li>
+                ))}
+              </ul>
+            </section>
 
-          <section>
-            <h3 className="font-semibold text-lg mb-3">Specifications:</h3>
-            <div className="grid gap-2">
-              {productDescription.specifications.map((spec, index) => (
-                <div key={index} className="grid grid-cols-2 gap-4">
-                  <span className="text-gray-600">{spec.label}:</span>
-                  <span className="text-gray-900">{spec.value}</span>
-                </div>
-              ))}
-            </div>
-          </section>
+            <section>
+              <h3 className="content-title">Specifications:</h3>
+              <div className="specifications-grid">
+                {productDescription.specifications.map((spec, index) => (
+                  <div key={index} className="specification-item">
+                    <span className="specification-label">{spec.label}:</span>
+                    <span className="specification-value">{spec.value}</span>
+                  </div>
+                ))}
+              </div>
+            </section>
 
-          <p className="text-gray-700 mt-4">
-            This wheelchair is an excellent choice for individuals seeking a reliable and comfortable mobility solution.
-          </p>
-        </div>
-      </TabsContent>
+            <p className="product-summary">
+              This wheelchair is an excellent choice for individuals seeking a reliable and comfortable mobility
+              solution.
+            </p>
+          </div>
+        )}
 
-      <TabsContent value="rental-terms" className="mt-6">
-        <RentalTerms />
-      </TabsContent>
-    </Tabs>
+        {activeTab === "rental-terms" && (
+          <div className="rental-terms-content">
+            <RentalTerms />
+          </div>
+        )}
+      </div>
+    </div>
   )
 }
 

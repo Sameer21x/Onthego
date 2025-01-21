@@ -11,6 +11,8 @@
 .carousel-container {
   display: flex;
   gap: 10px;
+  background-color: white !important;
+  border: 1px solid #00A3E0;
   overflow-x: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none; /* Hide scrollbar for Firefox */

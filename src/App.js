@@ -5,6 +5,7 @@ import About from "../src/pages/AboutUs/AboutUs";
 import Contact from "../src/pages/ContactUs/ContactUs"; 
 import FAQ from "../src/pages/FAQ/Faq"; 
 import Rentals from "../src/pages/Rental/Rental";
+import RentalProductsDetail from "./pages/RentalProductDetails/RentalProductsDetail";
 
 // import NotFound from "./pages/NotFound"; 
 import "./App.css";
@@ -19,6 +20,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/rentals" element={<Rentals />} /> 
+          <Route path="/rental/:id" element={<RentalProductsDetail />} />
 
 
           {/* <Route path="/about" element={<About />} />

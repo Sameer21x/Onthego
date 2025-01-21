@@ -3,12 +3,12 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #fff;
+    background-color: #00A3E0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .logo img {
-    height: 50px;
+    height: 80px;
   }
   
   .menu ul {
@@ -21,16 +21,17 @@
   
   .menu ul li {
     display: inline;
+    font-size: 24px;
   }
   
   .menu ul li a {
     text-decoration: none;
-    color: #007bff;
+    color: white;
     font-weight: bold;
     transition: color 0.3s ease;
   }
   
   .menu ul li a:hover {
-    color: #0056b3;
+    color: #FFDD00;
   }
   

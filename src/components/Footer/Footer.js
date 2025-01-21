@@ -1,4 +1,6 @@
 import React from 'react';
+import logo from "../../assets/images/whitelogo.png" // Import the image
+
 import './Footer.css';
 
 const Footer = () => {
@@ -6,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="/logo.png" alt="On The Go Medical Supply" />
+          <img src={logo} alt="On The Go Medical Supply" />
           <div className="social-icons">
             <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>

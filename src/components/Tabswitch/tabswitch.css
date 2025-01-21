@@ -1,66 +1,90 @@
-/* Custom styles for the switch tab component */
-.tabs-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem;
+.switch-tab {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tab-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tab-trigger {
+  padding: 0.75rem 1rem;
+  background-color: #f3f4f6;
+  border: none;
+  border-radius: 0.25rem;
+  font-weight: 500;
+  color: #4b5563;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tab-trigger.active {
+  background-color: #00A3E0;
+  color: white;
+}
+
+.tab-content {
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #111827;
+}
+
+.feature-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-list li {
+  margin-bottom: 0.5rem;
+  color: #4b5563;
+}
+
+.specifications-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.specification-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.specification-label {
+  color: #6b7280;
+}
+
+.specification-value {
+  color: #111827;
+  font-weight: 500;
+}
+
+.product-summary {
+  margin-top: 1.5rem;
+  color: #4b5563;
+}
+
+@media (max-width: 640px) {
+  .tab-list {
+    grid-template-columns: 1fr;
   }
-  
-  /* Override shadcn/ui tab styles for better visual hierarchy */
-  [data-state="active"][role="tab"] {
-    font-weight: 600;
+
+  .specification-item {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
   }
-  
-  /* Specification grid styling */
-  .specification-grid {
-    display: grid;
-    gap: 0.5rem;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 640px) {
-    .specification-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    [role="tablist"] {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  }
-  
-  /* Ensure proper spacing between sections */
-  .content-section:not(:last-child) {
-    margin-bottom: 2rem;
-  }
-  
-  /* Improve text readability */
-  .feature-list li {
-    line-height: 1.6;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Add subtle transitions */
-  .tab-content {
-    transition: opacity 0.2s ease-in-out;
-  }
-  
-  [role="tab"] {
-    transition: all 0.2s ease-in-out;
-  }
-  
-  /* Dark mode support */
-  @media (prefers-color-scheme: dark) {
-    .feature-list li {
-      color: rgb(209 213 219);
-    }
-  
-    .specification-label {
-      color: rgb(156 163 175);
-    }
-  
-    .specification-value {
-      color: rgb(229 231 235);
-    }
-  }
-  
-  
+}
+

@@ -1,0 +1,129 @@
+.rental-products-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f8fafc;
+  }
+  
+  .main-content {
+    flex: 1;
+    padding: 2rem 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Breadcrumb styles */
+  .breadcrumb {
+    margin-bottom: 2rem;
+  }
+  
+  .breadcrumb ol {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .breadcrumb li {
+    display: flex;
+    align-items: center;
+    color: #64748b;
+    font-size: 0.875rem;
+  }
+  
+  .breadcrumb li:not(:last-child)::after {
+    content: "/";
+    margin-left: 0.5rem;
+    color: #94a3b8;
+  }
+  
+  .breadcrumb a {
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  
+  .breadcrumb a:hover {
+    color: #0f172a;
+  }
+  
+  /* Section spacing */
+  .product-tabs-section {
+    margin: 3rem 0;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-inquiry-section {
+    margin: 3rem 0;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .main-content {
+      padding: 1rem 0;
+    }
+  
+    .container {
+      padding: 0 0.75rem;
+    }
+  
+    .product-tabs-section {
+      margin: 2rem 0;
+      padding: 1.5rem;
+    }
+  
+    .product-inquiry-section {
+      margin: 2rem 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .breadcrumb {
+      margin-bottom: 1.5rem;
+    }
+  
+    .product-tabs-section {
+      margin: 1.5rem 0;
+      padding: 1rem;
+    }
+  
+    .product-inquiry-section {
+      margin: 1.5rem 0;
+    }
+  }
+  
+  /* Print styles */
+  @media print {
+    .product-inquiry-section {
+      display: none;
+    }
+  
+    .main-content {
+      padding: 0;
+    }
+  }
+  
+  /* Ensure proper spacing between components */
+  .main-content > * + * {
+    margin-top: 2rem;
+  }
+  
+  /* Improve accessibility */
+  .main-content:focus {
+    outline: none;
+  }
+  
+  [aria-current="page"] {
+    font-weight: 500;
+    color: #0f172a;
+  }
+  
+  
