@@ -13,7 +13,7 @@ const CardsCarousel = ({ brands, title = "SUPPLY", subtitle = "HOSPITAL EQUIPMEN
   };
 
   return (
-    <div className="carousel-container">
+    <div className="carousel-cardcontainer">
       <div className="title-section">
         <h2>{title}</h2>
         <h3>{subtitle}</h3>

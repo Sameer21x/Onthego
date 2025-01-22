@@ -1,0 +1,122 @@
+.text-slider-container {
+    background: #f8fafc;
+    padding: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .slider-content {
+    flex: 1;
+    overflow: hidden;
+    /* margin-right: 1rem; */
+  }
+  
+  .sliding-text {
+    display: flex;
+    animation: slide 20s linear infinite;
+    white-space: nowrap;
+  }
+  
+  .sliding-text p {
+    padding-right: 50px;
+    color: #1e293b;
+    font-size: 0.875rem;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  .slider-buttons {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+  }
+  
+  .direction-btn,
+  .phone-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .direction-btn {
+    background-color: #0ea5e9;
+    color: white;
+  }
+  
+  .direction-btn:hover {
+    background-color: #0284c7;
+  }
+  
+  .phone-btn {
+    background-color: #f97316;
+    color: white;
+  }
+  
+  .phone-btn:hover {
+    background-color: #ea580c;
+  }
+  
+  .btn-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .text-slider-container {
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 0.5rem;
+    }
+  
+    .slider-content {
+      margin-right: 0;
+      margin-bottom: 0.5rem;
+    }
+  
+    .slider-buttons {
+      width: 100%;
+    }
+  
+    .direction-btn,
+    .phone-btn {
+      flex: 1;
+      justify-content: center;
+    }
+  }
+  
+  /* Pause animation on hover */
+  .slider-content:hover .sliding-text {
+    animation-play-state: paused;
+  }
+  
+  /* Ensure smooth animation */
+  .sliding-text {
+    will-change: transform;
+  }
+  
+  /* Improve accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .sliding-text {
+      animation: none;
+    }
+  }
+  
+  

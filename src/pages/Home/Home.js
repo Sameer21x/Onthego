@@ -6,6 +6,8 @@ import Cards from '../../components/Cards/Card';
 import Categories from '../../components/Categories/Categories';
 import CardsCarousel from '../../components/CardsCarousel/CardCarousel';
 import Footer from '../../components/Footer/Footer';
+import TextSlider from '../../components/TextSlider/TextSlider';
+import Store from '../../components/OurStore/Store';
 
 const Home = () => {
   // Sample data for CardsCarousel (replace with your actual data)
@@ -29,6 +31,18 @@ const Home = () => {
     {
       name: "Vive Health",
       logo: "/images/vive-health-logo.png"
+    },
+    {
+      name: "Vive Health",
+      logo: "/images/vive-health-logo.png"
+    },
+    {
+      name: "Vive Health",
+      logo: "/images/vive-health-logo.png"
+    },
+    {
+      name: "Vive Health",
+      logo: "/images/vive-health-logo.png"
     }
   ];
 
@@ -37,9 +51,7 @@ const Home = () => {
       <Header />
       
       <div className="announcement-strip">
-        <p>
-          <span className="highlight">New Location-Aug 2024</span> 11938 Hesperia Rd. Ste B Hesperia, CA 92345 next to Harbor Freight
-        </p>
+        <TextSlider />
       </div>
 
       <main className="main-content">
@@ -56,14 +68,9 @@ const Home = () => {
         </section>
 
         <section className="info-section">
-          <h2>Medical Equipment & Supplies</h2>
-          <p>
-            On The Go Medical Supply is your trusted partner in healthcare equipment and supplies. 
-            We offer a comprehensive range of medical equipment, supplies, and accessories to meet 
-            your healthcare needs. Our commitment to quality and customer service ensures you receive 
-            the best products and support for your medical requirements.
-          </p>
+          <Store />
         </section>
+
 
         <section className="brands-section">
           <CardsCarousel brands={brands} />
