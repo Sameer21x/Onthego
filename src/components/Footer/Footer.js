@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "../../assets/images/whitelogo.png" // Import the image
+import logo from "../../assets/images/whitelogo.png" 
 
 import './Footer.css';
 
@@ -8,7 +8,9 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-logo">
+          <a href="/" >
           <img src={logo} alt="On The Go Medical Supply" />
+          </a>
           <div className="social-icons">
             <a href="#" aria-label="Facebook"><i className="fab fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i className="fab fa-instagram"></i></a>

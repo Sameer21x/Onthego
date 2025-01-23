@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import './productinquiry.css';
 
 const ProductInquiry = () => {
@@ -15,10 +17,47 @@ const ProductInquiry = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Add logic to handle form submission here (e.g., API call)
+
+    // Create request body
+    const requestBody = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      rentalDate: formData.rentalDate,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch('http://localhost:5000/api/rentalinquiry', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit inquiry');
+      }
+
+      // Show success toast
+      toast.success('Your inquiry has been submitted successfully!');
+      // Optionally reset the form after successful submission
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        rentalDate: '',
+        message: '',
+      });
+    } catch (error) {
+      // Show error toast
+      toast.error('Failed to submit inquiry. Please try again.');
+      console.error('Error:', error);
+    }
   };
 
   return (
@@ -85,6 +124,9 @@ const ProductInquiry = () => {
         </div>
         <button type="submit" className="submit-button">Submit Inquiry</button>
       </form>
+
+      {/* Toast Container */}
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };

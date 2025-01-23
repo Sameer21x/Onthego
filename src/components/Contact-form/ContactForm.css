@@ -1,50 +1,88 @@
 .contact-form {
-    background-color: #F8F9FE;
-    padding: 32px;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  max-width: 42rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+.required {
+  color: #ef4444;
+}
+
+.name-fields {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .name-fields {
+    grid-template-columns: 1fr 1fr;
   }
-  
-  .contact-form h3 {
-    color: #666;
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-  
-  .form-group {
-    width: 100%;
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 90%;
-    padding: 12px 16px;
-    border: 1px solid #e2e8f0;
-    border-radius: 4px;
-    font-size: 14px;
-    background: white;
-  }
-  
-  .contact-form textarea {
-    height: 100px;
-    resize: vertical;
-  }
-  
-  .contact-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #0093F8;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 8px;
-  }
-  
-  .contact-form button:hover {
-    background-color: #0084E0;
-  }  
+}
+
+.input-group {
+  display: flex;
+    gap: 0.25rem;
+}
+
+.field-label {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #0194E2;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #9ca3af;
+}
+
+.submit-button {
+  padding: 0.5rem 1.5rem;
+  background-color: #0194E2;
+  color: white;
+  border: none;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-button:hover {
+  background-color: #2563eb;
+}
+
+.submit-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
