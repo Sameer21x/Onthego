@@ -31,7 +31,7 @@ const ProductInquiry = () => {
     };
 
     try {
-      const response = await fetch('http://localhost:5000/api/rentalinquiry', {
+      const response = await fetch('https://onthego-testingbackend.vercel.app/api/rentalinquiry', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

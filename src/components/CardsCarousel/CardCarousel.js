@@ -1,7 +1,7 @@
 import React from 'react';
 import './CardCarousel.css';
 
-const CardsCarousel = ({ brands, title = "SUPPLY", subtitle = "HOSPITAL EQUIPMENT BRANDS" }) => {
+const CardsCarousel = ({ brands, title = "Brands Quality You Can Rely On", subtitle = "Brand Quality You Can Rely On" }) => {
   const slideLeft = () => {
     const slider = document.getElementById('slider');
     slider.scrollLeft = slider.scrollLeft - 200;
@@ -15,8 +15,7 @@ const CardsCarousel = ({ brands, title = "SUPPLY", subtitle = "HOSPITAL EQUIPMEN
   return (
     <div className="carousel-cardcontainer">
       <div className="title-section">
-        <h2>{title}</h2>
-        <h3>{subtitle}</h3>
+        <h1>{title}</h1>
       </div>
       
       <div className="carousel-wrapper">

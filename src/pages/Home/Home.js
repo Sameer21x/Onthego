@@ -1,5 +1,12 @@
 import React from 'react';
 import './Home.css';
+import nova from "../../assets/images/nove-logo.png"
+import mckesson from "../../assets/images/mckesson-logo.png"
+import medline from "../../assets/images/medline-logo.png"
+import pride from "../../assets/images/pride-logo.png"
+import vive from "../../assets/images/vive-logo.png"
+import drive from "../../assets/images/drive-logo.png"
+import hollister from "../../assets/images/hollister-logo.png"
 import Header from '../../components/Header/Header';
 import ImageCarousel from '../../components/ImageCarousel/Imagecarousel';
 import Cards from '../../components/Cards/Card';
@@ -14,36 +21,32 @@ const Home = () => {
   const brands = [
     {
       name: "Nova",
-      logo: "/images/nova-logo.png"
+      logo: nova
     },
     {
       name: "Drive",
-      logo: "/images/drive-logo.png"
+      logo: drive
     },
     {
       name: "Pride",
-      logo: "/images/pride-logo.png"
+      logo: pride
     },
     {
       name: "Hollister",
-      logo: "/images/hollister-logo.png"
+      logo: hollister
     },
     {
       name: "Vive Health",
-      logo: "/images/vive-health-logo.png"
+      logo: vive
     },
     {
-      name: "Vive Health",
-      logo: "/images/vive-health-logo.png"
+      name: "mckesson",
+      logo: mckesson
     },
     {
-      name: "Vive Health",
-      logo: "/images/vive-health-logo.png"
+      name: "medline",
+      logo: medline
     },
-    {
-      name: "Vive Health",
-      logo: "/images/vive-health-logo.png"
-    }
   ];
 
   return (
@@ -67,7 +70,7 @@ const Home = () => {
           <Categories />
         </section>
 
-        <section className="info-section">
+        <section className="home-info-section">
           <Store />
         </section>
 

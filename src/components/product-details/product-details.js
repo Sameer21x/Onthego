@@ -1,12 +1,14 @@
 "use client"
 
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 import { MessageCircle } from "lucide-react"
 import wheelchairImage from "../../assets/images/16wheelchair.jpeg" // Import the image
 import "../product-details/product-details.css" // Import the CSS file
 
 export default function ProductDetails() {
-  const [selectedImage, setSelectedImage] = useState(wheelchairImage) // Default to the imported image
+  const [selectedImage, setSelectedImage] = useState(wheelchairImage)
+  const navigate = useNavigate();
 
   const productImages = [
     wheelchairImage,
@@ -16,6 +18,10 @@ export default function ProductDetails() {
     wheelchairImage,
     wheelchairImage,
   ]
+
+  const handleInquiryClick = () => {
+    navigate("/ProductInquiry");
+  };
 
   return (
     <div className="product-details">
@@ -48,9 +54,16 @@ export default function ProductDetails() {
             ))}
 
           </div>
-          <button className="inquiry-button">
+          <button
+            className="inquiry-button"
+            onClick={() => {
+              const inquirySection = document.getElementById("inquiry");
+              if (inquirySection) {
+                inquirySection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          >
             <MessageCircle className="mr-2 h-4 w-4" />
-
             INQUIRY NOW
           </button>
         </div>

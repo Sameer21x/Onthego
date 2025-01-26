@@ -1,113 +1,154 @@
 .home {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .announcement-strip {
-    background-color: #F5F5F5;
-    padding: 12px 0;
-    text-align: center;
-  }
-  
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-strip {
+  background-color: #F5F5F5;
+  padding: 12px 0;
+  text-align: center;
+}
+
+.announcement-strip p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.announcement-strip .highlight {
+  font-weight: 600;
+  color: #00A3E0;
+  margin-right: 8px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.carousel-section,
+.cards-section,
+.categories-section,
+.brands-section {
+  margin-bottom: 40px;
+}
+
+.home-info-section {
+  padding: 20px 20px;
+  text-align: center;
+  background-color: #FFFFFF;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.home-info-section h2 {
+  color: #333;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.home-info-section p {
+  color: #666;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .announcement-strip p {
-    margin: 0;
-    font-size: 16px;
-    color: #333;
-    line-height: 1.5;
-  }
-  
-  .announcement-strip .highlight {
-    font-weight: 600;
-    color: #00A3E0;
-    margin-right: 8px;
-  }
-  
-  .main-content {
-    flex: 1;
-  }
-  
-  .carousel-section,
-  .cards-section,
-  .categories-section,
-  .brands-section {
-    margin-bottom: 40px;
-  }
-  
-  .info-section {
-    padding: 20px 20px;
-    text-align: center;
-    background-color: #FFFFFF;
-    max-width: 1200px;
-    margin: 0 auto 40px;
-  }
-  
-  .info-section h2 {
-    color: #333;
-    font-size: 32px;
-    font-weight: 600;
-    margin-bottom: 20px;
-  }
-  
-  .info-section p {
-    color: #666;
-    font-size: 18px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .announcement-strip p {
       font-size: 14px;
       padding: 0 15px;
-    }
-  
-    .info-section {
-      padding: 40px 15px;
-    }
-  
-    .info-section h2 {
-      font-size: 28px;
-    }
-  
-    .info-section p {
-      font-size: 16px;
-    }
-  
-    .carousel-section,
-    .cards-section,
-    .categories-section,
-    .brands-section {
-      margin-bottom: 30px;
-    }
   }
-  
-  /* Container for sections */
+
+  .info-section {
+      padding: 40px 15px;
+  }
+
+  .info-section h2 {
+      font-size: 28px;
+  }
+
+  .info-section p {
+      font-size: 16px;
+  }
+
   .carousel-section,
   .cards-section,
   .categories-section,
   .brands-section {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0 20px;
+      margin-bottom: 30px;
   }
-  
-  /* Ensure footer sticks to bottom */
-  .home {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+
+  .carousel-section,
+  .cards-section,
+  .categories-section,
+  .brands-section {
+      padding: 0 15px;
   }
-  
-  .main-content {
-    flex: 1 0 auto;
+}
+
+@media (max-width: 576px) {
+  .announcement-strip p {
+      font-size: 12px;
+      line-height: 1.4;
+      padding: 0 10px;
   }
-  
-  footer {
-    flex-shrink: 0;
+
+  .info-section h2 {
+      font-size: 24px;
   }
-  
-  
+
+  .info-section p {
+      font-size: 14px;
+  }
+
+  .carousel-section,
+  .cards-section,
+  .categories-section,
+  .brands-section {
+      padding: 0 10px;
+      margin-bottom: 20px;
+  }
+
+  .cards-section,
+  .categories-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .brands-section {
+      flex-wrap: wrap;
+      gap: 10px;
+  }
+}
+
+/* Container for sections */
+.carousel-section,
+.cards-section,
+.categories-section,
+.brands-section {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 20px;
+}
+
+/* Ensure footer sticks to bottom */
+.home {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+}

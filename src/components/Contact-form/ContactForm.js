@@ -1,18 +1,19 @@
 "use client";
 
-import { useState } from "react";
+import React, { useState, useRef } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "../Contact-form/ContactForm.css";
 
 export function ContactForm() {
   const [isLoading, setIsLoading] = useState(false);
+  const formRef = useRef(null);
 
   async function handleSubmit(event) {
     event.preventDefault();
     setIsLoading(true);
   
-    const formData = new FormData(event.currentTarget);
+    const formData = new FormData(event.target);
     const data = {
       firstName: formData.get("firstName"),
       lastName: formData.get("lastName"),
@@ -24,7 +25,7 @@ export function ContactForm() {
     try {
       toast.dismiss(); // Dismiss any active toast notifications
   
-      const response = await fetch("http://localhost:5000/api/contactus", {
+      const response = await fetch("https://onthego-testingbackend.vercel.app/api/contactus", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -34,14 +35,17 @@ export function ContactForm() {
   
       // Log response status and body for debugging
       console.log('Response Status:', response.status);
-      console.log('Response Body:', await response.text());
+      const responseText = await response.text();
+      console.log('Response Body:', responseText);
   
       if (!response.ok) {
         throw new Error("Failed to send message");
       }
   
       toast.success("Your message has been sent successfully!");
-      event.currentTarget.reset();
+      if (formRef.current) {
+        formRef.current.reset();
+      }
   
     } catch (error) {
       toast.error("Failed to send message. Please try again.");

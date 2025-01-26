@@ -1,14 +1,21 @@
 import React from 'react';
+import showroom1 from "../../assets/images/our showroom1.jpeg"
+import showroom2 from "../../assets/images/ourshowroom 2.jpeg"
+import showroom3 from "../../assets/images/ourshowroom 3.jpeg"
+import showroom4 from "../../assets/images/ourshowroom 4.jpeg"
+import showroom5 from "../../assets/images/ourshowroom 5.jpeg"
+import showroom6 from "../../assets/images/ourshowroom 6.jpeg"
+
 import './Showroom.css';
 
 function Showroom() {
   const images = [
-    { src: "/showroom-1.jpg", alt: "Medical Equipment Display" },
-    { src: "/showroom-2.jpg", alt: "Medical Supplies Section" },
-    { src: "/showroom-3.jpg", alt: "Healthcare Products" },
-    { src: "/showroom-4.jpg", alt: "Medical Devices Display" },
-    { src: "/showroom-5.jpg", alt: "Equipment Section" },
-    { src: "/showroom-6.jpg", alt: "Mobility Aids Display" }
+    { src: showroom1, alt: "Medical Equipment Display" },
+    { src: showroom2, alt: "Medical Supplies Section" },
+    { src: showroom3, alt: "Healthcare Products" },
+    { src: showroom4, alt: "Medical Devices Display" },
+    { src: showroom5, alt: "Equipment Section" },
+    { src: showroom6, alt: "Mobility Aids Display" }
   ];
 
   return (
