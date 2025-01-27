@@ -70,11 +70,10 @@
 }
 
 .product-info {
-  max-width: 900px;
-  width: 1000px;
-  
-  /* height: 500px; */
+  width: 100%; 
+  max-width: 900px; 
 }
+
 
 .info-section {
   margin-bottom: 16px;
@@ -108,4 +107,39 @@
 
 .inquiry-button:hover {
   background-color: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  .product-content {
+    flex-direction: column; /* Stack images and info vertically */
+    gap: 16px; /* Reduce the gap for smaller screens */
+  }
+
+  .product-images {
+    align-items: flex-start; /* Align images to the left */
+  }
+
+  .main-image {
+    width: 100%; /* Make main image adapt to smaller screens */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+  }
+
+  .thumbnail-gallery {
+    flex-wrap: wrap; /* Allow thumbnails to wrap */
+    justify-content: center; /* Center thumbnails */
+  }
+
+  .thumbnail-image {
+    width: 50px; /* Reduce thumbnail size */
+    height: 50px;
+  }
+
+  .product-info {
+    text-align: center; /* Optional: Center-align text on mobile */
+  }
+
+  .info-section {
+    font-size: 14px; /* Adjust font size for readability */
+  }
 }
