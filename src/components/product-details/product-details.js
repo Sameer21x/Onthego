@@ -1,39 +1,25 @@
 "use client"
 
 import { useState } from "react"
-import { useNavigate } from "react-router-dom";
-import { MessageCircle } from "lucide-react"
-import wheelchairImage from "../../assets/images/16wheelchair.jpeg" // Import the image
-import "../product-details/product-details.css" // Import the CSS file
+import { useLocation } from "react-router-dom";
+import { MessageCircle } from 'lucide-react'
+import "../product-details/product-details.css"
 
 export default function ProductDetails() {
-  const [selectedImage, setSelectedImage] = useState(wheelchairImage)
-  const navigate = useNavigate();
+  const location = useLocation();
+  const product = location.state?.product || {};
+  const [selectedImage, setSelectedImage] = useState(product.image)
 
-  const productImages = [
-    wheelchairImage,
-    wheelchairImage,
-    wheelchairImage,
-    wheelchairImage,
-    wheelchairImage,
-    wheelchairImage,
-  ]
-
-  const handleInquiryClick = () => {
-    navigate("/ProductInquiry");
-  };
+  const productImages = Array(6).fill(product.image)
 
   return (
     <div className="product-details">
-
-
       <div className="product-content">
-        {/* Main image and thumbnails */}
         <div className="product-images">
           <div className="main-image-container">
             <img
-              src={selectedImage}
-              alt="Product main view"
+              src={selectedImage || "/placeholder.svg"}
+              alt={product.name}
               className="main-image"
             />
           </div>
@@ -46,13 +32,12 @@ export default function ProductDetails() {
                 onClick={() => setSelectedImage(img)}
               >
                 <img
-                  src={img}
-                  alt={`Thumbnail ${index + 1}`}
+                  src={img || "/placeholder.svg"}
+                  alt={`${product.name} thumbnail ${index + 1}`}
                   className="thumbnail-image"
                 />
               </button>
             ))}
-
           </div>
           <button
             className="inquiry-button"
@@ -68,13 +53,9 @@ export default function ProductDetails() {
           </button>
         </div>
 
-        {/* Product information */}
         <div className="product-info">
-
           <section className="info-section">
-            <h1 className="product-title">
-              HF3100 - I.C.U Bed Electric, 5 Function Column Model - With Weighing Scale
-            </h1>
+            <h1 className="product-title">{product.name}</h1>
             <h3>Important Information:</h3>
             <p>
               Thank you for choosing to rent medical equipment with us. Please take note of the following important
@@ -108,8 +89,6 @@ export default function ProductDetails() {
               delivered directly to your address with care to ensure it arrives in good working order.
             </p>
           </section>
-
-
         </div>
       </div>
     </div>

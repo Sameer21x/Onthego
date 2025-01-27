@@ -1,16 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import './productinquiry.css';
 
 const ProductInquiry = () => {
+  const location = useLocation();
+  const product = location.state?.product || {};
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     rentalDate: '',
     message: '',
+    productName: ''
   });
+
+  useEffect(() => {
+    // Update productName when component mounts or product changes
+    setFormData(prevData => ({
+      ...prevData,
+      productName: product.name || ''
+    }));
+  }, [product.name]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -19,16 +32,6 @@ const ProductInquiry = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-
-    // Create request body
-    const requestBody = {
-      name: formData.name,
-      email: formData.email,
-      phone: formData.phone,
-      rentalDate: formData.rentalDate,
-      message: formData.message,
-    };
 
     try {
       const response = await fetch('https://onthego-testingbackend.vercel.app/api/rentalinquiry', {
@@ -36,25 +39,23 @@ const ProductInquiry = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(requestBody),
+        body: JSON.stringify(formData),
       });
 
       if (!response.ok) {
         throw new Error('Failed to submit inquiry');
       }
 
-      // Show success toast
       toast.success('Your inquiry has been submitted successfully!');
-      // Optionally reset the form after successful submission
       setFormData({
         name: '',
         email: '',
         phone: '',
         rentalDate: '',
         message: '',
+        productName: product.name || ''
       });
     } catch (error) {
-      // Show error toast
       toast.error('Failed to submit inquiry. Please try again.');
       console.error('Error:', error);
     }
@@ -62,8 +63,21 @@ const ProductInquiry = () => {
 
   return (
     <div className="product-inquiry-container">
-      <h2>Product Inquiry</h2>
+      <h2>Product Inquiry - {formData.productName}</h2>
+
       <form onSubmit={handleSubmit}>
+        <div className="form-group">
+          <label htmlFor="productName">Product Name:</label>
+          <input
+            type="text"
+            id="productName"
+            name="productName"
+            value={formData.productName}
+            onChange={handleChange}
+            readOnly
+          />
+        </div>
+        {/* Rest of the form fields remain the same */}
         <div className="form-group">
           <label htmlFor="name">Your Name:</label>
           <input
@@ -125,7 +139,6 @@ const ProductInquiry = () => {
         <button type="submit" className="submit-button">Submit Inquiry</button>
       </form>
 
-      {/* Toast Container */}
       <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
