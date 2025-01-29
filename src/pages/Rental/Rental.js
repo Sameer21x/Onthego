@@ -10,18 +10,20 @@ export default function RentalPage() {
   return (
     <div className="rental-page">
       <Header />
-
+      <section className="rental-products-section">
+        <h1 className="rental-title">On the go medical equipment rental services</h1>
+        <h2 className="rental-subtitle">Click on an item below to submit a reservation inquiry,
+          <br></br>or call us at 760-552-4075 for assistance</h2>
+      </section>
       <main className="rental-content">
-        <section className="rental-products-section">
-          <h1 className="rental-title">HOSPITAL EQUIPMENT</h1>
-          <h2 className="rental-subtitle">USA BEST ONLINE MEDICAL SUPPLY STORE FOR HOSPITAL EQUIPMENT</h2>
-          <div className="breadcrumb">
-            <span>Accessories</span>
-            <span className="separator">{">"}</span>
-            <span>ECG Monitor Cable</span>
-          </div>
-          <ProductCards />
-        </section>
+
+        <div className="breadcrumb">
+          <span>Accessories</span>
+          <span className="separator">{">"}</span>
+          <span>ECG Monitor Cable</span>
+        </div>
+        <ProductCards />
+
 
         <section className="rental-terms-section">
           <RentalTerms />

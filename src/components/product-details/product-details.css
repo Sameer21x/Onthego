@@ -5,6 +5,31 @@
   font-weight: bold;
 }
 
+h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.feature-list {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.specifications-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.specifications-table td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.spec-label {
+  font-weight: bold;
+  width: 50%;
+}
 .product-content {
   display: flex;
   gap: 32px;
@@ -90,22 +115,18 @@
 
 .inquiry-button {
   display: flex;
-  width: 100%;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
   padding: 10px 16px;
-  height: 50px;
+  height: 40px;
   font-size: 16px;
-  gap: 10px;
+  gap: 5px;
   background-color: #00A3E0;
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.inquiry-button:hover {
-  background-color: #0056b3;
 }
 
 

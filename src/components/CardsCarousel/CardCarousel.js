@@ -13,22 +13,26 @@ const CardsCarousel = ({ brands, title = "Brands Quality You Can Rely On", subti
   };
 
   return (
+
     <div className="carousel-cardcontainer">
+      <div className="cardcarousel-divider"></div>
+
+
       <div className="title-section">
         <h1>{title}</h1>
       </div>
-      
+
       <div className="carousel-wrapper">
         <button className="nav-btn prev" onClick={slideLeft}>
           &#10094;
         </button>
-        
+
         <div className="carousel-track" id="slider">
           {brands.map((brand, index) => (
             <div key={index} className="carousel-card">
-              <img 
-                src={brand.logo} 
-                alt={`${brand.name} logo`} 
+              <img
+                src={brand.logo}
+                alt={`${brand.name} logo`}
                 className="brand-logo"
               />
             </div>
@@ -39,6 +43,7 @@ const CardsCarousel = ({ brands, title = "Brands Quality You Can Rely On", subti
           &#10095;
         </button>
       </div>
+
     </div>
   );
 };

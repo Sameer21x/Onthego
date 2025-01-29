@@ -5,41 +5,16 @@ import RentalTerms from "../RentalTerms&Conditions/RentalTerms"
 import "./tabswitch.css"
 
 export default function SwitchTab() {
-  const [activeTab, setActiveTab] = useState("description")
-
-  const productDescription = {
-    features: [
-      "Sturdy Frame: Powder-coated silver vein steel frame ensures long-lasting durability.",
-      "Easy-to-Clean Upholstery: Embossed vinyl upholstery is lightweight, attractive, and simple to maintain.",
-      "Adjustable Seat Height: Dual axle allows seat-to-floor height adjustment from 17.5 inches to 19.5 inches, accommodating various user needs.",
-      "Removable Armrests: Available with detachable desk-length armrests for personalized comfort.",
-      "Swing-Away Footrests: Equipped with swing-away footrests featuring tool-free adjustable length riggings and heel loops for added safety.",
-      "Smooth Mobility: Urethane tires mounted on composite wheels and 8-inch front casters, adjustable in three positions, provide a smooth ride over different surfaces.",
-      "Secure Wheel Locks: Push-to-lock wheel locks ensure stability during transfers.",
-      "Convenient Storage: Carry pocket on the backrest offers additional storage for personal items.",
-    ],
-    specifications: [
-      { label: "Seat Width", value: "20 inches" },
-      { label: "Seat Depth", value: "16 inches" },
-      { label: "Seat-to-Floor Height", value: "Adjustable from 17.5 inches to 19.5 inches" },
-      { label: "Back Height", value: "16 inches" },
-      { label: "Overall Width (Open)", value: "28 inches" },
-      { label: "Overall Width (Closed)", value: "12.5 inches" },
-      { label: "Overall Height", value: "36 inches" },
-      { label: "Overall Length (with Riggings)", value: "42 inches" },
-      { label: "Product Weight", value: "42 pounds" },
-      { label: "Weight Capacity", value: "300 pounds" },
-    ],
-  }
+  const [activeTab, setActiveTab] = useState("important-info")
 
   return (
     <div className="switch-tab">
       <div className="tab-list">
         <button
-          className={`tab-trigger ${activeTab === "description" ? "active" : ""}`}
-          onClick={() => setActiveTab("description")}
+          className={`tab-trigger ${activeTab === "important-info" ? "active" : ""}`}
+          onClick={() => setActiveTab("important-info")}
         >
-          Description
+          Important Information
         </button>
         <button
           className={`tab-trigger ${activeTab === "rental-terms" ? "active" : ""}`}
@@ -50,33 +25,22 @@ export default function SwitchTab() {
       </div>
 
       <div className="tab-content">
-        {activeTab === "description" && (
-          <div className="description-content">
-            <section>
-              <h3 className="content-title">Features:</h3>
-              <ul className="feature-list">
-                {productDescription.features.map((feature, index) => (
-                  <li key={index}>{feature}</li>
-                ))}
-              </ul>
-            </section>
+        {activeTab === "important-info" && (
+          <div className="important-info-content">
+            <h3 className="content-title">Important Information:</h3>
+            <p>Thank you for choosing to rent medical equipment with us. Please take note of the following important information and our rental terms & conditions to ensure a smooth rental process.</p>
 
-            <section>
-              <h3 className="content-title">Specifications:</h3>
-              <div className="specifications-grid">
-                {productDescription.specifications.map((spec, index) => (
-                  <div key={index} className="specification-item">
-                    <span className="specification-label">{spec.label}:</span>
-                    <span className="specification-value">{spec.value}</span>
-                  </div>
-                ))}
-              </div>
-            </section>
+            <h4>Rental Inquiry:</h4>
+            <p>You are submitting a rental inquiry for medical equipment. Once received, our customer service team will promptly contact you to confirm availability, discuss rental details, and arrange pickup or delivery scheduling.</p>
 
-            <p className="product-summary">
-              This wheelchair is an excellent choice for individuals seeking a reliable and comfortable mobility
-              solution.
-            </p>
+            <h4>Payment Policy:</h4>
+            <p>Please note that payment is required in-store prior to the delivery or pickup of your equipment. We accept cash, as well as all major credit and debit cards. Online payments are not accepted at this time.</p>
+
+            <h4>Store Pickup:</h4>
+            <p>If you prefer to collect your rental equipment in person, our team will have your items prepared and ready for pickup at the store. We will assist you with the collection to ensure you receive the equipment in proper condition.</p>
+
+            <h4>Home Delivery:</h4>
+            <p>For home delivery, our team will coordinate a convenient delivery schedule with you. The equipment will be delivered directly to your address with care to ensure it arrives in good working order.</p>
           </div>
         )}
 
@@ -89,4 +53,3 @@ export default function SwitchTab() {
     </div>
   )
 }
-

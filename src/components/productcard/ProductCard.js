@@ -12,14 +12,14 @@ export default function ProductCards() {
   const navigate = useNavigate();
 
   const products = [
-    { id: 1, name: "Wheelchair 16″ Seat, 300lbs capacity", price: 22227, image: wheelchair, availability: "In Stock" },
-    { id: 2, name: "Wheelchair 18″ Seat, 300lbs capacity", price: 22227, image: wheelchair, availability: "In Stock" },
-    { id: 3, name: "Wheelchair 20″ Seat, 300lbs capacity", price: 22227, image: wheelchair, availability: "In Stock" },
-    { id: 4, name: "Wheelchair 22″ Seat, 450lbs capacity", price: 22227, image: wheelchair22, availability: "In Stock" },
-    { id: 5, name: "Elevating Leg Rest", price: 22227, image: legrest, availability: "In Stock" },
-    { id: 6, name: "Knee Walker, 8 wheels & basket", price: 22227, image: scooter, availability: "In Stock" },
-    { id: 7, name: "Trapeze Bar Attachment (for Home Care Beds)", price: 22227, image: trapezebar, availability: "In Stock" },
-    { id: 8, name: "Full Electric Homecare Bed (rails & LTC mattress)", price: 22227, image: beds, availability: "In Stock" },
+    { id: 1, name: "Wheelchair 16″ Seat, 300lbs capacity", weeklyprice: 40,monthlyprice: 100, image: wheelchair, availability: "In Stock" },
+    { id: 2, name: "Wheelchair 18″ Seat, 300lbs capacity", weeklyprice: 22227,monthlyprice: 100, image: wheelchair, availability: "In Stock" },
+    { id: 3, name: "Wheelchair 20″ Seat, 300lbs capacity", weeklyprice: 22227,monthlyprice: 100, image: wheelchair, availability: "In Stock" },
+    { id: 4, name: "Wheelchair 22″ Seat, 450lbs capacity", weeklyprice: 22227,monthlyprice: 100, image: wheelchair22, availability: "In Stock" },
+    { id: 5, name: "Elevating Leg Rest", weeklyprice: 22227, monthlyprice: 100,image: legrest, availability: "In Stock" },
+    { id: 6, name: "Knee Walker, 8 wheels & basket", weeklyprice: 22227, monthlyprice: 100,image: scooter, availability: "In Stock" },
+    { id: 7, name: "Trapeze Bar Attachment (for Home Care Beds)", weeklyprice: 22227, monthlyprice: 100,image: trapezebar, availability: "In Stock" },
+    { id: 8, name: "Full Electric Homecare Bed (rails & LTC mattress)", weeklyprice: 22227, monthlyprice: 100,image: beds, availability: "In Stock" },
   ];
 
   const formatName = (name) => {
@@ -55,10 +55,14 @@ export default function ProductCards() {
               className="product-name"
               dangerouslySetInnerHTML={{ __html: formatName(product.name) }}
             ></h4>
-            <div className="product-availability">
-              Availability: <span className="in-stock">{product.availability}</span>
+            <div className="product-weeklyprice">
+              Weekly Price: <span className="product-price">{product.weeklyprice.toLocaleString()}</span>
             </div>
-            <div className="product-price">${product.price.toLocaleString()}</div>
+            
+            <div className="product-monthlyprice">
+              Monthly Price: <span className="product-price">{product.monthlyprice.toLocaleString()}</span>
+            </div>
+            {/* <div className="product-price">${product.price.toLocaleString()}</div> */}
             <button
               className="add-to-cart"
               onClick={(e) => {
@@ -66,8 +70,7 @@ export default function ProductCards() {
                 handleProductClick(product);
               }}
             >
-              <ShoppingCart className="cart-icon" />
-              Inquire Now
+              See Details
             </button>
           </div>
         </div>

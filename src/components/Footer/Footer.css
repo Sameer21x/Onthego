@@ -1,26 +1,31 @@
 .footer {
-  background-color: #00A3E0;
+  background-color: #1099df;
   color: white;
   padding: 40px 0 20px;
   width: 100%;
 }
 
 .footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  margin: 0 20px;
   padding: 0 20px;
   display: flex;
-  gap: 140px;
+  gap: 20%;
+  align-items: flex-start;
+  justify-content: space-between; /* Ensures spacing */
 }
 
 .footer-map {
   flex: 1;
+  width: 500px;
+  height: 500px;
   min-height: 300px;
 }
 
 .footer-info {
   flex: 1;
-  /* padding: 20px 0; */
+  margin-left: auto; /* Pushes it to the extreme right */
+  text-align: left; /* Ensures text remains left-aligned */
 }
 
 .footer-info h2 {
@@ -61,7 +66,7 @@
   gap: 15px;
   flex-wrap: wrap;
   margin-top: 20px;
-  justify-content: center;
+  justify-content: left;
 }
 
 .payment-methods img {
@@ -86,11 +91,14 @@
 /* Responsive Design */
 @media (max-width: 768px) {
   .footer-content {
+    display: inline-block;
     flex-direction: column;
   }
 
   .footer-map {
-    width: 100%;
+    width: 80%;
+    height: 400px !important; /* Force height increase */
+    min-height: 400px !important; /* Increase minimum height */
   }
 
   .footer-info {

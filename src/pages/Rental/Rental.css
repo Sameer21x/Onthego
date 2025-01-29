@@ -14,13 +14,14 @@
   }
   
   .rental-products-section {
-    margin-bottom: 4rem;
+    width: 100%;
+    background-color: #c2e8ff;
   }
   
   .rental-title {
-    color: #0369a1;
-    font-size: 1rem;
-    font-weight: 600;
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
@@ -28,7 +29,7 @@
   .rental-subtitle {
     color: #111827;
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 1.5rem;
     line-height: 1.3;
   }

@@ -1,7 +1,6 @@
 .rental-terms-container {
     margin: 2rem auto;
     text-align: left;
-    padding: 0 1rem;
     font-family: system-ui, -apple-system, sans-serif;
     color: #333;
   }
@@ -15,7 +14,7 @@
   }
   
   .rental-terms-content {
-    border: 1px solid #ccc;
+    /* border: 1px solid #1099DF; */
     border-radius: 8px;
     padding: 2rem;
     background-color: #fff;

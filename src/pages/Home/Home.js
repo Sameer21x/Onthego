@@ -57,14 +57,16 @@ const Home = () => {
         <TextSlider />
       </div>
 
-      <main className="main-content">
+      <main className="main-content-home">
         <section className="carousel-section">
           <ImageCarousel />
+          <Cards />
+
         </section>
 
-        <section className="cards-section">
+        {/* <section className="cards-section">
           <Cards />
-        </section>
+        </section> */}
 
         <section className="categories-section">
           <Categories />
