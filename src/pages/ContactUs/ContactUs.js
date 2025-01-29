@@ -10,10 +10,12 @@ function ContactUs() {
   return (
     <div className="contact-us-container">
       <Header />
+      <section className="rental-products-section">
+        <h1 className="rental-title">On the go medical equipment rental services</h1>
+        <h1 className="page-title">Get In Touch</h1>
+
+      </section>
       
-      <div className="contact-container">
-      <h1 className="page-title">Get In Touch</h1>
-    </div>
 
       <div className="contact-info">
         <div className="info-item">

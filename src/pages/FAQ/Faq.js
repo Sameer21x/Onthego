@@ -8,6 +8,11 @@ function FAQ() {
   return (
     <div className="faq-container">
       <Header />
+      <section className="rental-products-section">
+        <h1 className="rental-title">On the go medical equipment rental services</h1>
+          <h1>FREQUENTLY ASKED QUESTIONS</h1>
+
+      </section>
       <main className="faq-main">
         <Accordion />
       </main>

@@ -1,18 +1,23 @@
 import React, { useRef } from "react";
 import "../ImageCarousel/Imagecarousel.css";
-import banner1 from "../../assets/images/banner1.jpeg"
-import banner2 from "../../assets/images/banner2.png"
+import banner1 from "../../assets/images/banner2.png"
+import banner2 from "../../assets/images/reelimage1.jpeg"
 import banner3 from "../../assets/images/banner3.png"
+import banner4 from "../../assets/images/electricwheelchair.jpg"
+import banner5 from "../../assets/images/reelimage5.jpg"
+import banner6 from "../../assets/images/reelimage2.png"
+import banner7 from "../../assets/images/reelimage4.jpeg"
+
 
 
 const images = [
-  { src: banner3, alt: "Image 1" }, // Directly use the imported images
+  { src: banner1, alt: "Image 1" }, // Directly use the imported images
   { src: banner2, alt: "Image 2" },
   { src: banner3, alt: "Image 3" },
-  { src: "image3.jpg", alt: "Image 4" },
-  { src: "image3.jpg", alt: "Image 5" },
-  { src: "image3.jpg", alt: "Image 6" },
-  { src: "image3.jpg", alt: "Image 7" },
+  { src: banner4, alt: "Image 4" },
+  { src: banner5, alt: "Image 5" },
+  { src: banner6, alt: "Image 6" },
+  { src: banner7, alt: "Image 7" },
 ];
 
 
