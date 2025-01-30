@@ -34,8 +34,8 @@ export default function ProductDetails() {
       { label: "Product Weight", value: "42 pounds" },
       { label: "Weight Capacity", value: "300 pounds" },
     ],
-    weeklyPrice: location.state?.product?.weeklyprice ? "$" + location.state.product.weeklyprice : "$100",
-    monthlyPrice: location.state?.product?.monthlyprice ? "$" + location.state.product.monthlyprice: "$300", 
+    weeklyPrice: location.state?.product?.weeklyprice ? location.state.product.weeklyprice : "$100",
+    monthlyPrice: location.state?.product?.monthlyprice ? location.state.product.monthlyprice: "$300", 
   };
   
 

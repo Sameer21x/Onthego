@@ -80,9 +80,9 @@
 }
 
 .product-price {
-  font-size: 1.1rem;
+  font-size: 14px;
   /* Increased font size */
-  color: #2b6cb0;
+  /* color: #2b6cb0; */
   font-weight: 600;
 }
 

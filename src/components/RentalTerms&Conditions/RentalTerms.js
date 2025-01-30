@@ -54,15 +54,15 @@ export default function RentalTerms() {
   
           <section className="terms-section">
             <h2>5. General Conditions</h2>
-            <p>
-              Responsibility: The renter is responsible for ensuring the safe use, maintenance, and return of the rented
-              equipment. Any damage or loss will result in additional charges.
-            </p>
             <p>Cancellation Policy: Cancellations must be made at least 24 hours in advance to avoid additional fees.</p>
             <p>
               Equipment Return: All rented equipment must be returned on the agreed-upon date in good condition, or
               additional charges may apply.
             </p>
+            <p>
+              Responsibility: The renter is responsible for ensuring the safe use, maintenance, and return of the rented
+              equipment. Any damage or loss will result in additional charges.
+            </p><br></br>
             <p className="terms-agreement">
               By renting medical equipment, you acknowledge that you have read, understood, and agree to these terms and
               conditions.

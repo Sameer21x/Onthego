@@ -11,7 +11,6 @@ function ContactUs() {
     <div className="contact-us-container">
       <Header />
       <section className="rental-products-section">
-        <h1 className="rental-title">On the go medical equipment rental services</h1>
         <h1 className="page-title">Get In Touch</h1>
 
       </section>
@@ -36,7 +35,7 @@ function ContactUs() {
           <div className="icon-wrapper">
             <MapPin className="contact-icon" />
           </div>
-          <div className="address">
+          <div className="contactus-address">
             <p>11938 Hesperia Rd. Ste B</p>
             <p>Hesperia, CA 92345</p>
           </div>

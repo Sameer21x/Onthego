@@ -11,7 +11,7 @@
   .card {
     flex: 1;
     max-width: 25%; /* Ensure cards are of equal width */
-    border: 2px solid #0293e3;
+    border: 1px solid #0293e3;
     height: 200px;
     border-radius: 8px;
     padding: 20px;
@@ -32,9 +32,10 @@
   }
   
   .card-icon {
-    font-size: 24px;
+    font-size: 14px;
     color: #0293e3;
     margin-right: 10px;
+    margin-top: 10px;
   }
   
   .card-title {

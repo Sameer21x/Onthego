@@ -37,8 +37,9 @@
   }
   
   .terms-section p {
-    margin-bottom: 0.75rem;
-    line-height: 1.5;
+    /* margin-bottom: 0.75rem; */
+    margin: 0;
+    line-height: 20px;
   }
   
   .deposit-list {
@@ -48,8 +49,8 @@
   }
   
   .deposit-list li {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+    /* margin-bottom: 0.5rem; */
+    line-height: 22px;
   }
   
   .terms-agreement {

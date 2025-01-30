@@ -17,11 +17,7 @@ export default function RentalPage() {
       </section>
       <main className="rental-content">
 
-        <div className="breadcrumb">
-          <span>Accessories</span>
-          <span className="separator">{">"}</span>
-          <span>ECG Monitor Cable</span>
-        </div>
+        
         <ProductCards />
 
 

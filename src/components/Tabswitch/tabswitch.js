@@ -1,7 +1,6 @@
 "use client"
 
 import React, { useState } from "react"
-import RentalTerms from "../RentalTerms&Conditions/RentalTerms"
 import "./tabswitch.css"
 
 export default function SwitchTab() {
@@ -46,7 +45,43 @@ export default function SwitchTab() {
 
         {activeTab === "rental-terms" && (
           <div className="rental-terms-content">
-            <RentalTerms />
+            <h3 className="content-title">Rental Terms & Conditions</h3>
+            <p>By renting any medical equipment from us, you agree to the following terms and conditions:</p>
+
+            <h4>1. Delivery Information</h4>
+            <p>Two-Way Delivery is required for all hospital bed rentals. The delivery fee is charged upfront.</p>
+            <ul>
+              <li>Wheelchairs, Transport Chairs, Knee Walkers: Starting at $65.00 for two-way delivery.</li>
+              <li>Wheelchairs, Transport Chairs, Knee Walkers: Starting at $45.00 for one-way delivery.</li>
+              <li>Hospital Beds: Starting at $125.00 for two-way delivery.</li>
+            </ul>
+
+            <h4>2. Deposits</h4>
+            <p>For Non-Residential Addresses (e.g., Hotels, Motels), a deposit is required:</p>
+            <ul>
+              <li>Wheelchairs & Transport Chairs: $100.00 deposit</li>
+              <li>Heavy Duty Wheelchairs: $250.00 deposit</li>
+              <li>Knee Walkers: $100.00 deposit</li>
+              <li>Hospital Bed Packages: $500.00 deposit</li>
+            </ul>
+            <p>Refunds: Deposits for non-residential addresses are refundable upon the return of equipment in good condition.</p>
+            <p>Required: A valid credit card and government-issued ID must be provided at the time of rental.</p>
+
+            <h4>3. Rental Fees</h4>
+            <p>First Month's Rent & Delivery Fees are charged upfront at the time of rental.</p>
+            <p>No Refunds for Early Returns: Rental fees will not be refunded if the equipment is returned before the end of the agreed rental period.</p>
+
+            <h4>4. Hospital Bed Deliveries</h4>
+            <p>No Upstairs Deliveries of Hospital Beds: Hospital bed rentals will not be delivered to upper floors without an elevator.</p>
+
+            <h4>5. General Conditions</h4>
+            <ul>
+              <li><strong>Cancellation Policy:</strong> Cancellations must be made at least 24 hours in advance to avoid additional fees.</li>
+              <li><strong>Equipment Return:</strong> All rented equipment must be returned on the agreed-upon date in good condition, or additional charges may apply.</li>
+              <li><strong>Responsibility:</strong> The renter is responsible for ensuring the safe use, maintenance, and return of the rented equipment. Any damage or loss will result in additional charges.</li>
+            </ul>
+
+            <p>By renting medical equipment, you acknowledge that you have read, understood, and agree to these terms and conditions.</p>
           </div>
         )}
       </div>
