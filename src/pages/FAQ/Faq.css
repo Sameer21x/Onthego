@@ -9,6 +9,13 @@
     padding: 40px 0;
     background-color: #fff;
   }
+
+  .FAQS-title{
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
   
   @media (max-width: 768px) {
     .faq-main {

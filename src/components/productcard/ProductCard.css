@@ -4,8 +4,10 @@
   gap: 1.25rem;
   padding: 1rem;
   max-width: 100%;
-  margin: 0 auto; /* Center-align the grid */
-  box-sizing: border-box; /* Avoid overflow due to padding */
+  margin: 0 auto;
+  /* Center-align the grid */
+  box-sizing: border-box;
+  /* Avoid overflow due to padding */
 }
 
 .product-card {
@@ -17,7 +19,8 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 350px; /* Restrict card width */
+  max-width: 350px;
+  /* Restrict card width */
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -126,12 +129,20 @@
     grid-template-columns: repeat(2, 1fr);
     /* 2 products per row */
     gap: 0.75rem;
+    width: 80%;
+  }
+
+  .add-to-cart {
+    margin-left: 25%;
   }
 }
 
 @media (max-width: 480px) {
   .product-grid {
     grid-template-columns: 1fr;
-    /* 1 product per row */
+  }
+
+  .add-to-cart {
+    margin-left: 20%;
   }
 }

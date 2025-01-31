@@ -86,6 +86,9 @@
       gap: 0.75rem;
       padding: 0.5rem;
     }
+    .sliding-text {
+      animation: slide 240s linear infinite; /* Increased duration for mobile */
+    }
   
     .slider-content {
       margin-right: 0;

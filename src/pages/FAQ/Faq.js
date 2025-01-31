@@ -9,7 +9,7 @@ function FAQ() {
     <div className="faq-container">
       <Header />
       <section className="rental-products-section">
-          <h1>FREQUENTLY ASKED QUESTIONS</h1>
+          <h1 className='FAQS-title'>FREQUENTLY ASKED QUESTIONS</h1>
 
       </section>
       <main className="faq-main">

@@ -100,6 +100,11 @@
   .carousel-card {
     min-width: 100%; /* Show only 1 card at a time */
   }
+  .nav-btn {
+    background-color: #fff;
+    color: #1099df;
+    font-size: 30px;
+  }
 }
 
   

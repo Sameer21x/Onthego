@@ -78,6 +78,7 @@
 @media (max-width: 768px) {
   .header {
     flex-wrap: wrap;
+    z-index: 999999999;
   }
 
   .menu-toggle {
