@@ -10,7 +10,8 @@
   gap: 1rem;
   margin-bottom: 1rem;
 }
-.important-info-content{
+
+.important-info-content {
   text-align: left;
 }
 
@@ -40,7 +41,7 @@
 .content-title {
   font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   color: #111827;
 }
 
@@ -79,7 +80,9 @@
   margin-top: 1.5rem;
   color: #4b5563;
 }
-.important-info-content, .rental-terms-content {
+
+.important-info-content,
+.rental-terms-content {
   padding: 20px;
   text-align: left;
   border-radius: 8px;
@@ -88,17 +91,20 @@
 h3.content-title {
   font-size: 1.5rem;
   color: #333;
+  font-weight: 600;
 }
 
 h4 {
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: #333;
   margin-top: 10px;
+  margin-bottom: 0px;
 }
 
 p {
   font-size: 1rem;
   line-height: 1.6;
+  margin-top: 8px;
 }
 
 ul {
@@ -119,4 +125,3 @@ li {
     gap: 0.25rem;
   }
 }
-

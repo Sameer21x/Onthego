@@ -8,7 +8,8 @@ function AboutHero() {
       <div className="about-content">
         <h2>Convenient Location to Serve You</h2>
         <p>
-          At On The Go Medical Supply, We Pride Ourselves On Being Your Go-To Destination For All Your Medical Equipment And Supply Needs. With Over 20 Years Of Experience In The Industry, Our Professional Team Is Here To Provide Personalized Service That Fits You. Whether You Need Mobility Aids, Compression Stockings Or Need Assistance With Bath Safety Products, Our Knowledgeable Staff Is Ready To Help You Select The Perfect Items That Fit To Offer Top-Quality Products And Exceptional Service, Making Us Your Favorite Store For All Your Medical Supply Needs. Get In Today And Experience The Difference!
+        At On The Go Medical Supply, we’re more than just a store—we’re your dedicated partner in health and mobility. With over 20 years of experience, we understand that the right medical equipment can make a world of difference in your daily life.
+        <br></br><br></br>Visit us today and experience the care, quality, and convenience that make us the preferred choice for medical supplies.
         </p>
       </div>
       <div className="about-image">

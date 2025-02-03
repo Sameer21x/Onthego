@@ -87,12 +87,12 @@
       padding: 0.5rem;
     }
     .sliding-text {
-      animation: slide 240s linear infinite; /* Increased duration for mobile */
+      animation: slide 240s linear infinite;
+      margin-top: 10px;
     }
   
     .slider-content {
       margin-right: 0;
-      margin-bottom: 0.5rem;
     }
   
     .slider-buttons {
@@ -106,10 +106,7 @@
     }
   }
   
-  /* Pause animation on hover */
-  .slider-content:hover .sliding-text {
-    animation-play-state: paused;
-  }
+ 
   
   /* Ensure smooth animation */
   .sliding-text {
