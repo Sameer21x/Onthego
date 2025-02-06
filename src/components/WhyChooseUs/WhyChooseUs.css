@@ -48,8 +48,8 @@
   }
   
   .feature-box ul {
-    list-style: none;
-    padding: 0;
+    padding: 8;
+    text-align: left;
     margin: 0;
   }
   

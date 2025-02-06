@@ -38,10 +38,10 @@ const Header = () => {
           {/* Social Icons */}
           <div className="social-icons">
             <a href="https://m.facebook.com/onthegomed?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
-              <Facebook size={24} />
+              <Facebook size={35} />
             </a>
             <a href="https://www.instagram.com/onthegomedical/" target="_blank" rel="noopener noreferrer">
-              <Instagram size={24} />
+              <Instagram size={35} />
             </a>
           </div>
         </div>

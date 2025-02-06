@@ -11,26 +11,26 @@ function WhyChooseUs() {
       
       <div className="features-grid">
         <div className="feature-box">
-          <h3>Personalized Equipment Fitting</h3>
+          <h3>Personalized Product Selection</h3>
           <ul>
-            <li>Expert & Detailed: Our Personalized Mobility Guides Ensure The Perfect Fit For Your New Equipment Through A Comprehensive And Thorough Evaluation</li>
-            <li>Through Demonstrations Are Like The Time To Understand How Your Equipment, Enabling You To Confident And Ready To Use It Before You Leave</li>
+            <li>Explore & Discover: Our experienced Mobility staff ensure the perfect fit for your new equipment, providing a comfortable and optimal shopping experience.</li>
+            <li>Thorough Demonstrations: We take the time to demonstrate your new equipment, ensuring you’re confident and ready to use it before you leave our store.</li>
           </ul>
         </div>
 
         <div className="feature-box">
           <h3>Expert Technicians</h3>
           <ul>
-            <li>Certified Professionals: Our In-House Technicians Are Factory-Trained To Handle Both Repairs And New Equipment Installations, Ensuring Expert Service Every Time</li>
-            <li>Local & Reliable Warranty Work: We Offer Faster Response Times And Providing Faith And More Convenient Service Than Our Competitors</li>
+            <li>Local In-House Warranty Work: We perform all warranty work locally, providing convenient after care service for our customers.</li>
+            <li>Experienced technicians assemble our equipment so you don’t have to.</li>
           </ul>
         </div>
 
         <div className="feature-box">
           <h3>White-Glove Delivery Service</h3>
           <ul>
-            <li>Hassle-Free Convenience: Our Local Delivery Service Includes Assembly, Installation, And Set-Up</li>
-            <li>Equipment Training On Your Schedule: Our Delivery Team Ensures You're Fully Confident And Ready Without The Wait</li>
+            <li>Hassle-Free Experience: Our local delivery service includes assembly and comprehensive training on your new equipment, allowing you to enjoy your newly purchased equipment.</li>
+            <li>We offer dropship and delivery service for a fee, please call our store for details.</li>
           </ul>
         </div>
       </div>
