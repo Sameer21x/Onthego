@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom"
 import wheelchair from "../../assets/images/16wheelchair.jpeg"
 import wheelchair22 from "../../assets/images/22inchwheelchair.jpeg"
-import beds from "../../assets/images/beds.webp"
+// import beds from "../../assets/images/beds.webp"
+import LTCmattress from "../../assets/images/LTC mattress.png"
+import Foammattress from "../../assets/images/Foam mattres.png"
 import trapezebar from "../../assets/images/trapeze bar.jpeg"
 import scooter from "../../assets/images/kneescooter.webp"
 import legrest from "../../assets/images/leg rest.webp"
@@ -202,7 +204,7 @@ export default function ProductCards() {
       name: "Full Electric Homecare Bed (rails & LTC mattress)",
       weeklyprice: "Not Available for weekly rental",
       monthlyprice: "$300.00",
-      image: beds,
+      image: LTCmattress,
       features: [
         "The Full Electric Homecare Bed offers a lightweight and simple installation process while prioritizing comfort and safety. This electric bed features 3 adjustable functions via a hand pendant, allowing you to adjust the head, foot, and overall height with ease. The elegant walnut-finished bed ends add a touch of style. Available with either full or half side rails, this bed is designed to provide maximum safety and comfort, with a foam mattress that supports restful sleep or recovery.* 4 inch Length extender available upon request.",
         "Durable 2-piece tubular frame for reinforced strength.",
@@ -277,7 +279,7 @@ export default function ProductCards() {
       name: "Full Electric Homecare Bed (rails & foam mattress)",
       weeklyprice: "Not Available for weekly rental",
       monthlyprice: "$275.00",
-      image: beds,
+      image: Foammattress,
       features: [
         "The Full Electric Homecare Bed offers a lightweight and simple installation process while prioritizing comfort and safety. This electric bed features 3 adjustable functions via a hand pendant, allowing you to adjust the head, foot, and overall height with ease. The elegant walnut-finished bed ends add a touch of style. Available with either full or half side rails, this bed is designed to provide maximum safety and comfort, with a foam mattress that supports restful sleep or recovery.",
         "4-inch Length extender available upon request.",
