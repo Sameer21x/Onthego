@@ -17,7 +17,7 @@ export default function ProductCards() {
   const products = [
     {
       id: 1,
-      name: "Wheelchair 16″ Seat, 300lbs capacity",
+      name: "Compact Size Wheelchair 16” Seat, 300lbs capacity",
       weeklyprice: "$50.00",
       monthlyprice: "$100.00",
       image: wheelchair,
@@ -43,7 +43,7 @@ export default function ProductCards() {
     },
     {
       id: 2,
-      name: "Wheelchair 18″ Seat, 300lbs capacity",
+      name: "Standard Size Wheelchair 18” Seat, 300lbs capacity",
       weeklyprice: "$50.00",
       monthlyprice: "$100.00",
       image: wheelchair,
@@ -73,7 +73,7 @@ export default function ProductCards() {
     },
     {
       id: 3,
-      name: "Wheelchair 20″ Seat, 300lbs capacity",
+      name: "Spacious Size Wheelchair 20″ Seat, 300lbs capacity",
       weeklyprice: "$50.00",
       monthlyprice: "$100.00",
       image: wheelchair,
@@ -102,7 +102,7 @@ export default function ProductCards() {
     },
     {
       id: 4,
-      name: "Wheelchair 22″ Seat, 450lbs capacity",
+      name: "Extra Large Size Wheelchair 22″ Seat, 450lbs capacity",
       weeklyprice: "$75.00",
       monthlyprice: "$150.00",
       image: wheelchair22,
@@ -407,11 +407,9 @@ export default function ProductCards() {
   };
 
   const handleProductClick = (product) => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-    setTimeout(() => {
-      navigate(`/rental/${product.id}`, { state: { product } });
-    }, 300); // Adding a slight delay to ensure smooth scrolling before navigation
+    navigate(`/rental/${product.id}`, { state: { product } });
   };
+  
 
 
   return (

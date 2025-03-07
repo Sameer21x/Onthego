@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation,useNavigate  } from "react-router-dom";
 import { Menu, X, Facebook, Instagram } from 'lucide-react'; // Import icons
 import logo from "../../assets/images/whitelogo.png";
 import "./Header.css";
@@ -7,6 +7,8 @@ import "./Header.css";
 const Header = () => {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
 
   const isActive = (path) => (location.pathname === path ? "active" : "");
 
@@ -16,14 +18,12 @@ const Header = () => {
   };
 
   const handleLinkClick = (path) => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
     if (location.pathname !== path) {
-      setTimeout(() => {
-        window.location.href = path;
-      }, 300);
+      navigate(path); 
     }
     setIsMenuOpen(false);
   };
+  
 
   return (
     <header className="header">

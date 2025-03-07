@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Header from '../../components/Header/Header';    
 import Footer from '../../components/Footer/Footer';
 import AboutHero from '../../components/AboutHero/AboutHero';   
@@ -7,6 +8,12 @@ import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs';
 import '../AboutUs/AboutUs.css';
 
 function AboutUs() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  
   return (
     <div className="about-container">
       <Header />

@@ -2,9 +2,13 @@ import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import Accordion from '../../components/Accordian/Accordian';
+import { useEffect } from 'react';
 import '../FAQ/Faq.css';
 
 function FAQ() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="faq-container">
       <Header />

@@ -59,6 +59,7 @@
   .direction-btn {
     background-color: #0ea5e9;
     color: white;
+    text-decoration: none;
   }
   
   .direction-btn:hover {

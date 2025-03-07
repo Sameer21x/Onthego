@@ -1,4 +1,5 @@
-import { useLocation } from "react-router-dom";
+import { useLocation  } from "react-router-dom";
+import { useEffect } from "react";
 import Header from "../../components/Header/Header"
 import ProductDetails from "../../components/product-details/product-details"
 import SwitchTab from "../../components/Tabswitch/tabswitch"
@@ -7,6 +8,9 @@ import Footer from "../../components/Footer/Footer"
 import "../RentalProductDetails/RentalProductsDetail.css"
 
 export default function RentalProductsDetail() {
+  useEffect(() => {
+    window.scrollTo(0, 0); 
+  }, []);
   const location = useLocation();
   const product = location.state?.product || {};
 
@@ -22,7 +26,7 @@ export default function RentalProductsDetail() {
                 <a href="/">Home</a>
               </li>
               <li>
-                <a href="/rental">Rental</a>
+                <a href="/rentals">Rental</a>
               </li>
               <li>
                 <span aria-current="page">{product.name}</span>

@@ -4,9 +4,13 @@ import Header from "../../components/Header/Header"
 import ProductCards from "../../components/productcard/ProductCard"
 import RentalTerms from "../../components/RentalTerms&Conditions/RentalTerms"
 import Footer from "../../components/Footer/Footer"
+import { useEffect } from "react"
 import "../Rental/Rental.css"
 
 export default function RentalPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="rental-page">
       <Header />

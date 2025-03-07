@@ -22,7 +22,7 @@ function Showroom() {
     <div className="showroom-section">
       <h2>OUR SHOWROOM</h2>
       <p>
-        Visit Our High Desert Showroom And Explore Top-Quality Mobility Aids, Medical Devices, And Health Essentials, From Mobility Scooter To Medical Supplies; We're Here To Support Your Well Being And Comfort.
+      Our High Desert showroom features a curated selection of top-quality mobility aids, advanced medical devices, and essential health supplies—from mobility scooters to everyday necessities—designed to support your comfort and well-being.
       </p>
       <div className="showroom-grid">
         {images.map((image, index) => (

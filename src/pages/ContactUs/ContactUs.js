@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import {ContactForm} from '../../components/Contact-form/ContactForm';
@@ -7,6 +8,12 @@ import { Phone, Mail, MapPin } from "lucide-react"
 import './ContactUs.css';
 
 function ContactUs() {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div className="contact-us-container">
       <Header />

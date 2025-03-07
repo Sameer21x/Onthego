@@ -15,8 +15,16 @@ import CardsCarousel from '../../components/CardsCarousel/CardCarousel';
 import Footer from '../../components/Footer/Footer';
 import TextSlider from '../../components/TextSlider/TextSlider';
 import Store from '../../components/OurStore/Store';
+import { useEffect } from 'react';
+
 
 const Home = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  
   // Sample data for CardsCarousel (replace with your actual data)
   const brands = [
     {

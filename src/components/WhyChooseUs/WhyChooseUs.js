@@ -5,9 +5,9 @@ function WhyChooseUs() {
   return (
     <div className="why-choose-section">
       <h2>WHY CHOOSE ON THE GO MEDICAL SUPPLY</h2>
-      <p>
+      {/* <p>
         While You May Find Lower Prices For Medical Equipment Online, On The Go Medical Supply Offers A Unique Set Of Value-Added Services That Enhance Your Ownership Experience, Making Our Offerings More Cost-Effective When Comparing The Full Range Of Services We Provide Against Our Competitors.
-      </p>
+      </p> */}
       
       <div className="features-grid">
         <div className="feature-box">

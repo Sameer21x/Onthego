@@ -6,19 +6,19 @@ const Cards = () => {
   const cardData = [
     {
       icon: <Home color="#1099df" size={25} />,  // Use the Home icon
-      title: "Open to the Public",
+      title: "Experience It Firsthand",
       description:
-        "Do you prefer to try before you buy or apprehensive about purchasing medical equipment online? Come into our fully stocked showroom for a demo! Plus, we sell most of our products already assembled for your convenience!",
+        "Discover our comprehensive showroom, where you can explore, test, and experience our pre-assembled medical equipment and devices. Our live demonstrations empower you to make confident decisions in person.",
     },
     {
       icon: <Banknote color="#1099df" size={25} />,  // Use the DollarSign icon
-      title: "No insurance coverage?",
+      title: "Budget-Friendly Options",
       description:
-        "No insurance, no problem. The majority of our products don't require a doctor's prescription to purchase. You choose the best option for your budget!",
+        "Concerned about insurance? Many of our products are available without a doctor's prescription, ensuring you have access to quality solutions that fit your budget.",
     },
     {
       icon: <Handshake color="#1099df" size={25} />,  // Use the Handshake icon
-      title: "Why choose us?",
+      title: "Excellence in Every Detail",
       description:
         "Our shelves are stocked with a variety of wound care and assistive medical devices. Our staff will take the time to explain and demo our products to you, no pushy sales pitch! We also offer great after-sales service.",
     },

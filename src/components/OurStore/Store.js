@@ -25,9 +25,8 @@ export default function Store() {
     <div className="showroom-container">
       <h1 className="showroom-title">Your Trusted Medical Supply Store</h1>
       <p className="showroom-description">
-        Visit On The Go Medical Supply showroom and explore top-quality
-        mobility aids, medical devices, and health essentials. From lift chairs
-        to mobility scooters, we're here to support your well-being.
+      Visit On The Go Medical Supply showroom and explore top-quality mobility aids, medical devices, and health essentials. 
+      From lift chairs to mobility knee scooters, we're here to support your well-being.
       </p>
       <div className="image-grid">
         <div className="image-container">
