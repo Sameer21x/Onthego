@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import wheelchair from "../../assets/images/16wheelchair.jpeg"
+import wheelchair from "../../assets/images/wheelchair16-20.jpeg"
 import wheelchair22 from "../../assets/images/22inchwheelchair.jpeg"
 // import beds from "../../assets/images/beds.webp"
 import LTCmattress from "../../assets/images/LTC mattress.png"
@@ -205,8 +205,9 @@ export default function ProductCards() {
       weeklyprice: "Not Available for weekly rental",
       monthlyprice: "$300.00",
       image: LTCmattress,
-      features: [
+      "features": [
         "The Full Electric Homecare Bed offers a lightweight and simple installation process while prioritizing comfort and safety. This electric bed features 3 adjustable functions via a hand pendant, allowing you to adjust the head, foot, and overall height with ease. The elegant walnut-finished bed ends add a touch of style. Available with either full or half side rails, this bed is designed to provide maximum safety and comfort, with a foam mattress that supports restful sleep or recovery.* 4 inch Length extender available upon request.",
+        "The Drive Medical Gravity 7 Pressure Redistribution Mattress offers a high-quality, therapeutic foam solution for enhanced comfort and effective pressure redistribution, ideal for long-term care environments. Designed with three layers of foam, this mattress provides targeted support where it’s needed most: a die-cut top layer, a heel-zone memory foam section to relieve pressure points.",
         "Durable 2-piece tubular frame for reinforced strength.",
         "Four 3-inch castors, with two locking and two swivel for mobility.",
         "Washable and long-lasting bed ends.",
@@ -280,8 +281,11 @@ export default function ProductCards() {
       weeklyprice: "Not Available for weekly rental",
       monthlyprice: "$275.00",
       image: Foammattress,
-      features: [
+      "features": [
+        "Full Electric Homecare Bed (rails & foam mattress)",
         "The Full Electric Homecare Bed offers a lightweight and simple installation process while prioritizing comfort and safety. This electric bed features 3 adjustable functions via a hand pendant, allowing you to adjust the head, foot, and overall height with ease. The elegant walnut-finished bed ends add a touch of style. Available with either full or half side rails, this bed is designed to provide maximum safety and comfort, with a foam mattress that supports restful sleep or recovery.",
+        "High quality latex-free therapeutic foam mattress provides pressure redistribution and shear/friction reduction.",
+        "Deluxe horizontal, cross-cut foam mattress provides comfort, support, and pressure redistribution over 5 therapeutic pressure zones.",
         "4-inch Length extender available upon request.",
         "Durable 2-piece tubular frame for reinforced strength.",
         "Four 3-inch castors, with two locking and two swivel for mobility.",
@@ -289,7 +293,7 @@ export default function ProductCards() {
         "Mattress retainer system to keep the foam mattress in place.",
         "Available with full or half side rails for extra safety.",
         "The foam mattress offers a comfortable yet supportive surface for relaxation.",
-        "Bed Dimensions: 86” L x 36” W x 15” – 23” H.",
+        "Bed Dimensions: 86” L x 36” W x 15” – 23” H."
       ],
       specifications: [
         { label: "Height Range", value: "15 in – 23 in" },
@@ -411,7 +415,7 @@ export default function ProductCards() {
   const handleProductClick = (product) => {
     navigate(`/rental/${product.id}`, { state: { product } });
   };
-  
+
 
 
   return (
